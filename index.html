@@ -25,37 +25,36 @@
                     </div>
                 </div>
             </div>
-            <div id="result"></div>
-            <table>
-                <tr id="tr">
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                    <td id="blueButton">DEL</td>
-                </tr>
-                <tr id="tr">
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>+</td>
-                </tr>
-                <tr id="tr">
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>-</td>
-                </tr>
-                <tr id="tr">
-                    <td>.</td>
-                    <td>0</td>
-                    <td>/</td>
-                    <td>X</td>
-                </tr>
-                <tr id="tr">
-                    <td colspan="2" id="blueButton">RESET</td>
-                    <td colspan="2">=</td>
-                </tr>
-            </table>
+            <input type="text" id="result" disabled>
+            <div id="table">    
+                <div id="tr">
+                    <button id="td" onclick="calckResult('7')">7</button>
+                    <button id="td" onclick="calckResult('8')">8</button>
+                    <button id="td" onclick="calckResult('9')">9</button>
+                    <button id="td" id="blueButton" onclick="clearResult()">DEL</button>
+                </div>
+                <div id="tr">
+                    <button id="td" onclick="calckResult('4')">4</button>
+                    <button id="td" onclick="calckResult('5')">5</button>
+                    <button id="td" onclick="calckResult('6')">6</button>
+                    <button id="td" onclick="calckResult('+')">+</button>
+                </div>
+                <div id="tr">
+                    <button id="td" onclick="calckResult('1')">1</button>
+                    <button id="td" onclick="calckResult('2')">2</button>
+                    <button id="td" onclick="calckResult('3')">3</button>
+                    <button id="td" onclick="calckResult('-')">-</button>
+                </div>
+                <div id="tr">
+                    <button id="td" onclick="calckResult('.')">.</button>
+                    <button id="td" onclick="calckResult('0')">0</button>
+                    <button id="td" onclick="calckResult('/')">/</button>
+                    <button id="td" onclick="calckResult('*')">x</button>
+                </div>
+                <div id="tr">
+                    <button colspan="2" id="tdEnd" onclick="calculateResult()">=</button>
+                </div>
+            </div>
         </div>
     </div>
     <script src="./main.js"></script>

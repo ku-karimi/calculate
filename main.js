@@ -30,7 +30,7 @@ function themeChangerThree() {
     colorsBox.style.setProperty('--backgroundCalc','#181C14')
     colorsBox.style.setProperty('--tdBackground','#697565')
     colorsBox.style.setProperty('--borderColor','#3C3D37')
-    colorsBox.style.setProperty('--diferentTd','#EBD3F8')
+    colorsBox.style.setProperty('--diferentTd','#1B3C73')
     colorsBox.style.setProperty('--shadow','#A59D84')
     colorsBox.style.setProperty('--fontColor','snow')
     themeBar.style.justifyContent = "end" ;
@@ -40,3 +40,20 @@ function themeChangerThree() {
 themeNumber1.addEventListener("click", themeChangerOne);
 themeNumber2.addEventListener("click", themeChangerTow);
 themeNumber3.addEventListener("click", themeChangerThree);
+
+function calckResult(value) {
+    document.getElementById('result').value += value;
+}
+
+function clearResult() {
+    document.getElementById('result').value = '';
+}
+
+function calculateResult() {
+    const resultField = document.getElementById('result');
+    try {
+        resultField.value = eval(resultField.value);
+    } catch (error) {
+        resultField.value = 'Error';
+    }
+}
